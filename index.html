@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" ng-app="opt">
+<head>
+  <meta charset="UTF-8">
+  <title>Opt</title>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div ng-view></div>
+  </div>
+  <!-- JS -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="public/js/vendor/jquery.velocity.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-animate.js"></script>
+  <script src="public/js/mainCtrl.js"></script>
+  <script src="public/js/app.js"></script>
+  <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '53603d708bfdf76ff70001cd');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+  <!-- End JS -->
+</body>
+</html>
