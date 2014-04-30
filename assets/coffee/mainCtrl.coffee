@@ -6,6 +6,7 @@ angular.module('mainCtrl', []).controller('MainController', ($scope) ->
     if $scope.choice
       $scope.choices.push(@choice)
       $scope.choice = ""
+      $('input[type=text]').focus()
 
   $scope.chooseRandomItem = ->
     chosen = $scope.choices[Math.floor(Math.random()*$scope.choices.length)].toString()

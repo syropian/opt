@@ -5,7 +5,8 @@
     $scope.addChoice = function() {
       if ($scope.choice) {
         $scope.choices.push(this.choice);
-        return $scope.choice = "";
+        $scope.choice = "";
+        return $('input[type=text]').focus();
       }
     };
     return $scope.chooseRandomItem = function() {
