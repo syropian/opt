@@ -9,7 +9,8 @@
       <button type="submit">Add</button>  
     </div>
   </form>
-  <button ng-click="chooseRandomItem()" class="pick">Pick It!</button>
+  <button ng-click="chooseRandomItem()" class="pick" ng-show="!chosen">Pick It!</button>
+  <button ng-click="reset()" class="pick" ng-show="chosen">Reset</button>
   <div class="choices">
     <ul>
       <li ng-repeat="choice in choices" class="choice">
