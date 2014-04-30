@@ -31,6 +31,7 @@ body {
   position: fixed; top: 0; left: 0;
   text-align: center;
   width: 100%;
+  z-index: 99999;
   .header-title {
     margin: 0;
     text-shadow: 0 -1px 0 darken($blue, 10%);
