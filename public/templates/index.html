@@ -14,7 +14,8 @@
   <div class="choices">
     <ul>
       <li ng-repeat="choice in choices" class="choice">
-        {{ choice }}
+        <span class="choice-name">{{ choice }}</span>
+        <a href ng-click="removeChoice($index)" class="remove-choice">&times;</a>
       </li>
     </ul>
   </div>

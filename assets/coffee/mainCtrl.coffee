@@ -5,16 +5,21 @@ angular.module('mainCtrl', []).controller('MainController', ($scope) ->
   
   $scope.addChoice = ->
     if $scope.choice
+      $('input[type=text]').focus()
       $scope.choices.push(@choice)
       $scope.choice = ""
-      $('input[type=text]').focus()
+    return
+  
+  $scope.removeChoice = (index) ->
+    $scope.choices.splice(index, 1)
+    return  
 
   $scope.chooseRandomItem = ->
     $scope.chosen = true
     chosen = $scope.choices[Math.floor(Math.random()*$scope.choices.length)].toString()
-    $('.choices ul li').filter((index) ->
+    $('.choice-name').filter((index) ->
       return $(this).text().trim() isnt chosen
-    ).velocity({
+    ).parent('.choice').addClass('nope').velocity({
       scaleX: 0.7
       scaleY: 0.7
       opacity: 0.5
@@ -22,7 +27,7 @@ angular.module('mainCtrl', []).controller('MainController', ($scope) ->
       duration: 1300
       easing: "spring"
     })
-    $('.choices ul li').filter((index) -> return $(this).text().trim() is chosen).addClass('woot')
+    $('.choice-name').filter((index) -> return $(this).text().trim() is chosen).parent('.choice').addClass('woot')
     return
   $scope.reset = ->
     $('.choices ul li').removeClass('woot')
